@@ -1,4 +1,4 @@
-# lionagi
+# vynix 
 
 Powerful Intelligent Workflow Automation. 
 
