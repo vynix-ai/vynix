@@ -61,12 +61,12 @@ vynix is released under the [MIT License](https://github.com/lion-agi/lionagi/LI
 When referencing vynix in your projects or research, please cite:
 
 ```bibtex
-@misc{vynix,
+@software{Li_vynix_2023,
   author = {Haiyang Li},
-  title = {vynix: Towards Automated Intelligence},
+  month = {12},
   year = {2023},
-  howpublished = {\url{https://github.com/lion-agi/lionagi}}
+  title = {vynix: Towards Automated Intelligence},
+  url = {https://github.com/lion-agi/lionagi},
 }
 ```
-
 Thank you for choosing vynix. 
