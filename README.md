@@ -1,11 +1,16 @@
 # vynix 
 
-Towards Automated General Intelligence. vynix is a data centric project for production ready applications that uses AI tools, such as LLM (Large Language Model). 
+Towards Automated General Intelligence. 
+
+
+
+vynix is a data centric project for production ready applications that uses AI tools, such as LLM (Large Language Model). 
 
 vynix enables powerful and robust intelligent workflow automation
-    - Fast file manipulation, reading, chunking, binning, saving to tabular format
-    - Concurrent API calls to OpenAI with custom rate limits for maximum throughput
-    - Intuitive interaction with LLM for rapid workflow creation
+
+- Fast file manipulation, reading, chunking, binning, saving to tabular format
+- Concurrent API calls to OpenAI with custom rate limits for maximum throughput
+- Intuitive interaction with LLM for rapid workflow creation
 
 Currently, vynix only natively support OpenAI API calls, support for LLM providers as well as open source will be integrated in future releases.  
 
