@@ -4,7 +4,7 @@ Towards Automated General Intelligence.
 
 
 
-vynix is a data centric project for production ready applications that uses AI tools, such as LLM (Large Language Model). 
+vynix is a data centric project for production ready applications that use AI tools, such as LLM (Large Language Model). 
 
 vynix enables powerful and robust intelligent workflow automation
 
