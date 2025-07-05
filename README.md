@@ -72,7 +72,7 @@ When referencing vynix in your projects or research, please cite:
   author = {Haiyang Li},
   month = {12},
   year = {2023},
-  title = {vynix: Towards Automated Intelligence},
+  title = {vynix: Towards Automated General Intelligence},
   url = {https://github.com/lion-agi/lionagi},
 }
 ``` 
