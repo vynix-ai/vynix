@@ -1,3 +1,5 @@
+python version >= 3.9
+
 # vynix
 **Towards Automated General Intelligence**
 
