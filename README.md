@@ -5,6 +5,7 @@
 - PyPI: https://pypi.org/project/lionagi/
 - Documentation: https://lionagi.readthedocs.io/en/latest/  （still a lot TODO）
 - Website: TODO
+- Discord: [Join Our Discord](https://discord.gg/ACnynvvPjt)
   
 # vynix
 **Towards Automated General Intelligence**
