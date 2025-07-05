@@ -63,3 +63,6 @@ When referencing vynix in your projects or research, please cite:
 }
 ```
 Thank you for choosing vynix. 
+
+### Requirements
+Python 3.9 or higher. 
