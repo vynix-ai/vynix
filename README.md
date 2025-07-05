@@ -78,6 +78,11 @@ When referencing vynix in your projects or research, please cite:
   title = {vynix: Towards Automated General Intelligence},
   url = {https://github.com/lion-agi/lionagi},
 }
-``` 
+```
+
+## Star History
+![Star History Chart](https://api.star-history.com/svg?repos=lion-agi/lionagi&type=Date)
+
 ### Requirements
 Python 3.9 or higher. 
+
