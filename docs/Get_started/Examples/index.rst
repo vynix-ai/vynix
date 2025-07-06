@@ -7,3 +7,4 @@ applications of vynix.
 .. toctree::
 
    calculator.rst
+   comedian.rst
