@@ -9,3 +9,4 @@ applications of vynix.
    calculator.rst
    comedian.rst
    function.rst
+   auto_research.rst
