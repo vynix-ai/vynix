@@ -11,3 +11,4 @@ applications of vynix.
    function.rst
    auto_research.rst
    coder.rst
+   coder_session.rst
