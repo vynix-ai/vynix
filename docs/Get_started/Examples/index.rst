@@ -10,5 +10,3 @@ applications of vynix.
    comedian.rst
    function.rst
    auto_research.rst
-   coder.rst
-   coder_session.rst
