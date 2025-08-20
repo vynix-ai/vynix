@@ -58,13 +58,13 @@ class ItemInvalidError(LionItemError):
         super().__init__(item, "The item is invalid for this operation.")
 
 
-class LionFieldError(vynixError):
+class FieldError(vynixError):
     """Exception raised for errors in field validation."""
 
-    def __init__(self, message=None):
+    def __init__(self, field, message=None):
         if message is None:
             message = "An error occurred with the specified field."
-        super().__init__(f"{message}.")
+        super().__init__(f"{message}: {field}.")
 
 
 class LionOperationError(vynixError):
@@ -91,6 +91,15 @@ class RelationError(vynixError):
     def __init__(self, message=None):
         if message is None:
             message = "Nodes are not related."
+        super().__init__(message)
+
+
+class ActionError(vynixError):
+    """Exception raised for errors in action operations."""
+
+    def __init__(self, message=None):
+        if message is None:
+            message = "An error occurred with the specified action."
         super().__init__(message)
 
 
