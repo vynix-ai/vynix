@@ -56,69 +56,113 @@ vynix `agent` can manage and direct other agents, can also use multiple differ
 <img width="700" alt="parallel agents" src="https://github.com/lion-agi/lionagi/assets/122793010/ab263a6a-c7cc-40c3-8c03-ba1968df7309">
 
 
-### Install vynix with pip:
 
-```bash
-pip install lionagi
-```
-Download the `.env_template` file, input your appropriate `API_KEY`, save the file, rename as `.env` and put in your project's root directory. 
-by default we use `OPENAI_API_KEY`.
+✅ : Done
+
+〰️ : Not started
+
+🛠️: In progress
+
+| Folder             | Module             | written | Can run | Doc |
+| ------------------ | ------------------ | ------- | ------- | --- |
+| Action             | function_calling   | ✅       | ✅       | 〰️  |
+|                    | manual             | 〰️      | 〰️      | 〰️  |
+|                    | node               | ✅       | ✅       | 〰️  |
+|                    | tool_manager       | ✅       | ✅       | 〰️  |
+|                    | tool               | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| agent              | base_agent         | ✅       | 🛠️     | 〰️  |
+| agent.evaluator    | evaluator          | 🛠️     | 🛠️     | 〰️  |
+|                    | score              | 🛠️     | 🛠️     | 〰️  |
+|                    | vote               | 🛠️     | 🛠️     | 〰️  |
+| agent.learner      | learn              | 🛠️     | 🛠️     | 〰️  |
+|                    | learner            | 🛠️     | 🛠️     | 〰️  |
+| agent.planner      | plan               | 🛠️     | 🛠️     | 〰️  |
+|                    |                    |         |         |     |
+| collections.abc    | component          | ✅       | ✅       | 〰️  |
+|                    | concepts           | ✅       | ✅       | 〰️  |
+|                    | exceptions         | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| collections        | exchange           | ✅       | ✅       | 〰️  |
+|                    | flow               | ✅       | ✅       | 〰️  |
+|                    | model              | ✅       | ✅       | 〰️  |
+|                    | pile               | ✅       | ✅       | 〰️  |
+|                    | progression        | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| directive.engine   | ast_evaluator      | 🛠️     | 〰️      | 〰️  |
+|                    | sandbox            | 🛠️     | 〰️      | 〰️  |
+|                    | script_engine      | 🛠️     | 〰️      | 〰️  |
+| directive.parser   | base               | 🛠️     | 〰️      | 〰️  |
+|                    | syntax.txt         | 🛠️     | 〰️      | 〰️  |
+| directive.template | base               | 🛠️     | 〰️      | 〰️  |
+|                    | schema             | 🛠️     | 〰️      | 〰️  |
+| directive.unit     | templates          | ✅       | ✅       | 〰️  |
+|                    | unit               | ✅       | 🛠️     | 〰️  |
+|                    | parallel_unit      | 🛠️     | 🛠️     | 〰️  |
+|                    |                    |         |         |     |
+| director           | direct             | 🛠️     | 〰️      | 〰️  |
+|                    | director           | 🛠️     | 〰️      | 〰️  |
+|                    |                    |         |         |     |
+| execute            | base               | 🛠️     | 〰️      | 〰️  |
+|                    | branch_executor    | 🛠️     | 〰️      | 〰️  |
+|                    | instruction_map    | 🛠️     | 〰️      | 〰️  |
+|                    | neo4j_executor     | 🛠️     | 〰️      | 〰️  |
+|                    | structure_executor | 🛠️     | 〰️      | 〰️  |
+|                    |                    |         |         |     |
+| generic            | edge               | ✅       | ✅       | 〰️  |
+|                    | graph              | ✅       | ✅       | 〰️  |
+|                    | node               | ✅       | ✅       | 〰️  |
+|                    | hyperedge          | 🛠️     |         | 〰️  |
+|                    | tree_node          | ✅       | ✅       | 〰️  |
+|                    | tree               | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| mail               | mail               | ✅       | ✅       | 〰️  |
+|                    | mail_manager       | ✅       | ✅       | 〰️  |
+|                    | package            | ✅       | ✅       | 〰️  |
+|                    | start_mail         | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| message            | action_request     | ✅       | ✅       | 〰️  |
+|                    | action_response    | ✅       | ✅       | 〰️  |
+|                    | assistant_response | ✅       | ✅       | 〰️  |
+|                    | instruction        | ✅       | ✅       | 〰️  |
+|                    | message            | ✅       | ✅       | 〰️  |
+|                    | system             | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| report             | base               | ✅       | ✅       | 〰️  |
+|                    | form               | ✅       | ✅       | 〰️  |
+|                    | report             | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| rule               | base               | ✅       | ✅       | 〰️  |
+|                    | action             | ✅       | ✅       | 〰️  |
+|                    | boolean            | ✅       | ✅       | 〰️  |
+|                    | choice             | ✅       | ✅       | 〰️  |
+|                    | mapping            | ✅       | ✅       | 〰️  |
+|                    | number             | ✅       | ✅       | 〰️  |
+|                    | rulebook           | ✅       | ✅       | 〰️  |
+|                    | string             | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| session            | branch             | ✅       | ✅       | 〰️  |
+|                    | directive-mixin    | 🛠️     | 〰️      | 〰️  |
+|                    | session            | 🛠️     | 〰️      | 〰️  |
+|                    |                    |         |         |     |
+| validator          | validator          | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
+| structure          | chain              | 🛠️     | 🛠️     | 〰️  |
+|                    | tree               | 〰️      | 〰️      | 〰️  |
+|                    | graph              | 〰️      | 〰️      | 〰️  |
+|                    | forest             | 〰️      | 〰️      | 〰️  |
+|                    |                    |         |         |     |
+| work               | work function      | ✅       | ✅       | 〰️  |
+|                    | work queue         | ✅       | ✅       | 〰️  |
+|                    | work               | ✅       | ✅       | 〰️  |
+|                    | worker             | ✅       | ✅       | 〰️  |
+|                    | worklog            | ✅       | ✅       | 〰️  |
+|                    |                    |         |         |     |
 
 
-### Quick Start
 
-The following example shows how to use vynix's `Session` object to interact with `gpt-4-turbo` model:
 
-```python
 
-# define system messages, context and user instruction
-system = "You are a helpful assistant designed to perform calculations."
-instruction = {"Addition":"Add the two numbers together i.e. x+y"}
-context = {"x": 10, "y": 5}
-
-model="gpt-4-turbo-preview"
-```
-
-```python
-# in interactive environment (.ipynb for example)
-from lionagi import Session
-
-calculator = Session(system)
-result = await calculator.chat(instruction, context=context, model=model)
-
-print(f"Calculation Result: {result}")
-```
-
-```python
-# or otherwise, you can use
-import asyncio
-from dotenv import load_dotenv
-
-load_dotenv()
-
-from lionagi import Session
-
-async def main():
-    calculator = Session(system)
-    result = await calculator.chat(instruction, context=context, model=model)
-
-    print(f"Calculation Result: {result}")
-
-if __name__ == "__main__":
-    asyncio.run(main())
-```
-
-Visit our notebooks for examples. 
-
-vynix is designed to be `asynchronous` only, please check python official documentation on how `async` work: [here](https://docs.python.org/3/library/asyncio.html)
-
----
-
-**Notice**: 
-* calling API with maximum throughput over large set of data with advanced models i.e. gpt-4 can get **EXPENSIVE IN JUST SECONDS**,
-* please know what you are doing, and check the usage on OpenAI regularly
-* default rate limits are set to be 1,000 requests, 100,000 tokens per miniute, please check the [OpenAI usage limit documentation](https://platform.openai.com/docs/guides/rate-limits?context=tier-free) you can modify token rate parameters to fit different use cases.
-* if you would like to build from source, please download the [latest release](https://github.com/lion-agi/lionagi/releases),  
 ### Community
 
 We encourage contributions to vynix and invite you to enrich its features and capabilities. Engage with us and other community members [Join Our Discord](https://discord.gg/7RGWqpSxze)
