@@ -47,5 +47,4 @@ When referencing vynix in your projects or research, please cite:
 
 
 ### Requirements
-Python 3.10 or higher. 
-
+Python 3.10 or higher.
