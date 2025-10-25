@@ -48,7 +48,7 @@ html_css_files = [
 ]
 
 # (Optional) a custom title for the entire site:
-html_title = "My LIONAGI Documentation"
+html_title = "vynix Documentation"
 
 
 # -- Custom / Additional config options -----------------------------------
