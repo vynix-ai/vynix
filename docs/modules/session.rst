@@ -1,5 +1,5 @@
 ====================================
-Session (``lionagi.session.session``)
+Session
 ====================================
 
 A **Session** in vynix manages multiple conversation “branches” and the 

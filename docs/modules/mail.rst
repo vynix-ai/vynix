@@ -1,5 +1,5 @@
 ==============================
-vynix Mail System Reference
+Mail
 ==============================
 
 The vynix **mail system** provides a framework for sending and receiving

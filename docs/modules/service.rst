@@ -1,5 +1,5 @@
 ==================================
-vynix Service System (``service``)
+API Service System
 ==================================
 
 The **Service** subsystem in vynix provides classes and utilities

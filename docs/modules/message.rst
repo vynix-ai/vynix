@@ -1,5 +1,5 @@
 =============================================
-vynix Messages and Conversation Workflows
+Messages & Conversation
 =============================================
 
 This document provides an overview of vynix’s **message system**, which

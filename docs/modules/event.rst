@@ -1,5 +1,5 @@
 ==========================
-vynix Event Architecture
+Event Architecture
 ==========================
 
 The **Event system** in vynix provides a uniform way to **track, log, and

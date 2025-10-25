@@ -1,5 +1,5 @@
 ===================================
-Branch (``lionagi.session.branch``)
+Branch
 ===================================
 A **Branch** in vynix coordinates multiple subsystems—**messages**, 
 **tools** (action manager), **models** (iModel manager), and **logs**—into 

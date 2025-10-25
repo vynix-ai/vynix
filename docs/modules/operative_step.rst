@@ -1,5 +1,5 @@
 =====================================
-Operative & Step (``lionagi.operatives``)
+Operative & Step
 =====================================
 
 The **Operative** and **Step** classes in vynix provide a **step-based** 
