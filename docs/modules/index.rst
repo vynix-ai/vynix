@@ -1,7 +1,7 @@
 .. _lionagi-modules-index:
 
 ====================
-vynix Modules Index
+Modules API Reference
 ====================
 
 Below is an overview of all modules in the vynix library:
