@@ -20,6 +20,7 @@ Below is an overview of all modules in the vynix library:
    instruct
    mail
    message
+   models
    operations
    operative_step
    pile_progression
@@ -32,4 +33,3 @@ Below is an overview of all modules in the vynix library:
    lib_package
    lib_schema
    lib_validate
-   models
