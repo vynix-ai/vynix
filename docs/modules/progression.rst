@@ -1,7 +1,7 @@
 .. _lionagi_protocols_generic_progression:
 
 =========================================================
-Progression: An Ordered Sequence for vynix
+Progression
 =========================================================
 .. module:: lionagi.protocols.generic.progression
    :synopsis: Implements a strictly ordered collection of IDs with optional naming.
