@@ -225,7 +225,7 @@ We welcome issues, ideas, and pull requests:
 
 ```
 @software{Li_vynix_2023,
-  author = {Haiyang Li, Liangbingyan Luo},
+  author = {Haiyang Li},
   month = {12},
   year = {2023},
   title = {vynix: Towards Automated General Intelligence},
