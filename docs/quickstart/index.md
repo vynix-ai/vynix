@@ -5,8 +5,10 @@ Get up and running with vynix in minutes.
 ## Steps
 
 1. **[Installation](installation.md)** - Install and configure vynix
-2. **[Your First Flow](your-first-flow.md)** - Build your first multi-agent workflow
-3. **[Claude Code Integration](claude-code-integration.md)** - Use with Anthropic's Claude Code
+2. **[Your First Flow](your-first-flow.md)** - Build your first multi-agent
+   workflow
+3. **[Claude Code Integration](claude-code-integration.md)** - Use with
+   Anthropic's Claude Code
 
 ## Minimal Example
 
@@ -29,4 +31,5 @@ async def analyze(topic):
 result = asyncio.run(analyze("AI safety"))
 ```
 
-That's the core idea - multiple agents, working together, with minimal complexity.
+That's the core idea - multiple agents, working together, with minimal
+complexity.

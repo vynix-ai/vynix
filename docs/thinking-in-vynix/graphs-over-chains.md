@@ -301,4 +301,6 @@ analysis = builder.add_operation(..., depends_on=[research])
 # operation = builder.add_operation(..., depends_on=[many, complex, deps])
 ```
 
-Graphs in vynix enable sophisticated execution patterns through parallel processing, proper dependency management, and flexible workflow topologies that sequential chains cannot achieve.
+Graphs in vynix enable sophisticated execution patterns through parallel
+processing, proper dependency management, and flexible workflow topologies that
+sequential chains cannot achieve.

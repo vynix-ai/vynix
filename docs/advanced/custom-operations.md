@@ -4,12 +4,14 @@ Creating specialized operations for vynix workflows.
 
 ## Core Concept
 
-Operations are building blocks that branches execute. vynix provides built-in operations like `chat`, `communicate`, `operate`, and `ReAct`, but you can create custom ones for specialized tasks.
+Operations are building blocks that branches execute. vynix provides built-in
+operations like `chat`, `communicate`, `operate`, and `ReAct`, but you can
+create custom ones for specialized tasks.
 
 ## Built-in Operations
 
 - **chat**: Basic conversation
-- **communicate**: Stateful conversation  
+- **communicate**: Stateful conversation
 - **operate**: Structured output with Pydantic
 - **ReAct**: Reasoning with tools
 
