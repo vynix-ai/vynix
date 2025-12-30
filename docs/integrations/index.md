@@ -37,6 +37,6 @@ This works with:
 
 ## Integration Patterns
 
-**Wrapper Operations**: Embed external tools as vynix operations
-**Multi-Framework**: Coordinate multiple frameworks in single workflow\
-**Gradual Migration**: Keep existing code while gaining orchestration benefits
+- **Wrapper Operations**: Embed external tools as vynix operations
+- **Multi-Framework**: Coordinate multiple frameworks in single workflow
+- **Gradual Migration**: Keep existing code while gaining orchestration benefits
