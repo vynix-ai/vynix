@@ -1,9 +1,12 @@
 # Why vynix?
 
-## The Core Difference
+## The Fundamental Shift
 
-vynix treats multi-agent coordination as a graph problem, not a conversation
-problem.
+vynix is evolving into an **orchestration engine** - you bring the operations, we provide the coordination machinery.
+
+### The Core Difference
+
+While others provide operations, vynix provides orchestration. We treat coordination as a graph problem, not a conversation problem.
 
 ## What This Means in Practice
 

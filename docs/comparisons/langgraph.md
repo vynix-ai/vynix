@@ -340,8 +340,8 @@ analysis = builder.add_operation("communicate", branch=analyst, instruction="Ana
 
 ### 3. **Memory Management**
 
-**LangGraph**: Manual state passing, complex message handling\
-**vynix**: Automatic memory management per branch
+- **LangGraph**: Manual state passing, complex message handling
+- **vynix**: Automatic memory management per branch
 
 ```python
 # vynix: Each branch maintains independent memory
