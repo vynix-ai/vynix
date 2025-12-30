@@ -1,6 +1,7 @@
 # Models and Providers
 
-vynix's `iModel` provides a unified interface for working with different LLM providers.
+vynix's `iModel` provides a unified interface for working with different LLM
+providers.
 
 ## Basic Usage
 
@@ -185,4 +186,5 @@ CONFIGS = {
 dev_assistant = Branch(chat_model=CONFIGS["development"])
 ```
 
-vynix's iModel provides a consistent interface across providers while handling API differences and configuration automatically.
+vynix's iModel provides a consistent interface across providers while handling
+API differences and configuration automatically.
