@@ -1,53 +1,36 @@
-![PyPI - Version](https://img.shields.io/pypi/v/lionagi?labelColor=233476aa&color=231fc935)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/lionagi?color=blue)
-![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
-[![codecov](https://codecov.io/github/khive-ai/lionagi/graph/badge.svg?token=FAE47FY26T)](https://codecov.io/github/khive-ai/lionagi)
+# VYNIX - Versatile Yet Networked Intelligence eXchange
 
-[Documentation](https://khive-ai.github.io/lionagi/) |
-[Discord](https://discord.gg/JDj9ENhUE8) |
-[PyPI](https://pypi.org/project/lionagi/)
+## An Agentic Intelligence SDK
 
-# LION - Language InterOperable Network
+Vynix is a robust framework for orchestrating multi-step AI operations with precise control. Bring together multiple models, advanced reasoning loops, tool integrations, and custom validations in a single coherent pipeline.
 
-## An AGentic Intelligence SDK
-
-LionAGI is a robust framework for orchestrating multi-step AI operations with
-precise control. Bring together multiple models, advanced ReAct reasoning, tool
-integrations, and custom validations in a single coherent pipeline.
-
-## Why LionAGI?
+## Why Vynix?
 
 - **Structured**: Validate and type all LLM interactions with Pydantic.
-- **Expandable**: Integrate multiple providers (OpenAI, Anthropic, Perplexity,
-  custom) with minimal friction.
-- **Controlled**: Use built-in safety checks, concurrency strategies, and advanced
-  multi-step flows like ReAct.
-- **Transparent**: Debug easily with real-time logging, message introspection, and
-  tool usage tracking.
+- **Expandable**: Integrate multiple providers with minimal friction.
+- **Controlled**: Use built-in safety checks, concurrency strategies, and advanced multi-step flows.
+- **Transparent**: Debug easily with real-time logging, message introspection, and tool usage tracking.
 
 ## Installation
 
 ```
-uv add lionagi  # recommended to use pyproject and uv for dependency management
+uv add vynix  # recommended
 
-pip install lionagi # or install directly
+pip install vynix  # or install directly
 ```
 
 ## Quick Start
 
 ```python
-from lionagi import Branch, iModel
+from vynix import Branch, iModel
 
-# Pick a model
 gpt4o = iModel(provider="openai", model="gpt-4o-mini")
 
-# Create a Branch (conversation context)
 hunter = Branch(
-  system="you are a hilarious dragon hunter who responds in 10 words rhymes.",
+  system="you are a hilarious dragon hunter who responds in 10 word rhymes.",
   chat_model=gpt4o,
 )
 
-# Communicate asynchronously
 response = await hunter.communicate("I am a dragon")
 print(response)
 ```
@@ -81,17 +64,15 @@ With fiery claws, dragons hide their laughter flaws!
 
 ### ReAct and Tools
 
-LionAGI supports advanced multi-step reasoning with ReAct. Tools let the LLM
-invoke external actions:
+Vynix supports advanced multi-step reasoning with ReAct. Tools let the LLM invoke external actions:
 
 ```
-pip install "lionagi[reader]"
+pip install "vynix[reader]"
 ```
 
 ```python
-from lionagi.tools.types import ReaderTool
+from vynix.tools.types import ReaderTool
 
-# Define model first
 gpt4o = iModel(provider="openai", model="gpt-4o-mini")
 
 branch = Branch(chat_model=gpt4o, tools=[ReaderTool])
@@ -100,31 +81,28 @@ result = await branch.ReAct(
       "instruction": "Summarize my PDF and compare with relevant papers.",
       "context": {"paper_file_path": "/path/to/paper.pdf"},
     },
-    extension_allowed=True,     # allow multi-round expansions
+    extension_allowed=True,
     max_extensions=5,
-    verbose=True,      # see step-by-step chain-of-thought
+    verbose=True,
 )
 print(result)
 ```
 
-The LLM can now open the PDF, read in slices, fetch references, and produce a
-final structured summary.
+The LLM can open the PDF, read in slices, fetch references, and produce a final structured summary.
 
-### MCP (Model Context Protocol) Integration
+### MCP Integration
 
-LionAGI supports Anthropic's Model Context Protocol for seamless tool integration:
+Vynix supports the Model Context Protocol for seamless tool integration:
 
 ```
-pip install "lionagi[mcp]"
+pip install "vynix[mcp]"
 ```
 
 ```python
-from lionagi import load_mcp_tools
+from vynix import load_mcp_tools
 
-# Load tools from any MCP server
 tools = await load_mcp_tools(".mcp.json", ["search", "memory"])
 
-# Use with ReAct reasoning
 branch = Branch(chat_model=gpt4o, tools=tools)
 result = await branch.ReAct(
     instruct={"instruction": "Research recent AI developments"},
@@ -139,71 +117,64 @@ result = await branch.ReAct(
 
 ### Observability & Debugging
 
-- Inspect messages:
+Inspect messages:
 
 ```python
 df = branch.to_df()
 print(df.tail())
 ```
 
-- Action logs show each tool call, arguments, and outcomes.
-- Verbose ReAct provides chain-of-thought analysis (helpful for debugging
-  multi-step flows).
+Action logs show each tool call, arguments, and outcomes. Verbose ReAct provides chain-of-thought analysis helpful for debugging multi-step flows.
 
-### Example: Multi-Model Orchestration
+### Multi-Model Orchestration
 
 ```python
-from lionagi import Branch, iModel
+from vynix import Branch, iModel
 
-# Define models for multi-model orchestration
 gpt4o = iModel(provider="openai", model="gpt-4o-mini")
 sonnet = iModel(
   provider="anthropic",
   model="claude-3-5-sonnet-20241022",
-  max_tokens=1000,                    # max_tokens is required for anthropic models
+  max_tokens=1000,
 )
 
 branch = Branch(chat_model=gpt4o)
-analysis = await branch.communicate("Analyze these stats", chat_model=sonnet) # Switch mid-flow
+analysis = await branch.communicate("Analyze these stats", chat_model=sonnet)
 ```
 
 Seamlessly route to different models in the same workflow.
 
-### Claude Code Integration
+### CLI Model Integration
 
-LionAGI now supports Anthropic's Claude Code [CLI SDK](https://docs.anthropic.com/en/docs/claude-code/sdk) enabling autonomous coding capabilities with persistent session management. The CLI endpoint
-directly connects to claude code, and is recommended, you can either use it via a [proxy server](https://github.com/khive-ai/lionagi/tree/main/cookbooks/claude_proxy) or directly with `query_cli` endpoint, provided you have already logged onto claude code cli in your terminal.
+Vynix supports autonomous coding capabilities with persistent session management via a CLI endpoint.
 
 ```python
-from lionagi import iModel, Branch
+from vynix import iModel, Branch
 
-def create_cc_model():
+def create_cli_model():
   return iModel(
-      provider="claude_code",
+      provider="cli_coder",
       endpoint="query_cli",
       model="sonnet",
-      verbose_output=True,  # Enable detailed output for debugging
+      verbose_output=True,
   )
 
-# Start a coding session
-orchestrator = Branch(chat_model=create_cc_model())
-response = await orchestrator.communicate("Explain the architecture of protocols, operations, and branch")
+orchestrator = Branch(chat_model=create_cli_model())
+response = await orchestrator.communicate("Explain the system architecture")
 
-# continue the session with more queries
-response2 = await orchestrator.communicate("how do these parts form lionagi system")
+response2 = await orchestrator.communicate("How do these components fit together?")
 ```
 
-### Fan out fan in pattern orchestration with claude code
+### Fan-Out / Fan-In Orchestration
 
 ```python
-# use structured outputs with claude code
-from lionagi.fields import LIST_INSTRUCT_FIELD_MODEL, Instruct
+from vynix.fields import LIST_INSTRUCT_FIELD_MODEL, Instruct
 
 response3 = await orchestrator.operate(
   instruct=Instruct(
     instruction="create 4 research questions for parallel discovery",
     guidance="put into `instruct_model` field as part of your structured result message",
-    context="I'd like to create an orchestration system for AI agents using lionagi"
+    context="I'd like to create an orchestration system for AI agents using vynix"
   ),
   field_models=[LIST_INSTRUCT_FIELD_MODEL],
 )
@@ -212,60 +183,40 @@ len(response3.instruct_model)  # should be 4
 
 async def handle_instruct(instruct):
   sub_branch = Branch(
-    system="You are an diligent research expert.",
-    chat_model=create_cc_model(),
+    system="You are a diligent research expert.",
+    chat_model=create_cli_model(),
   )
   return await sub_branch.operate(instruct=instruct)
 
-# run in parallel across all instruct models
-from lionagi.ln import alcall
+from vynix.ln import alcall
 responses = await alcall(response3.instruct_model, handle_instruct)
 
-# now hand these reports back to the orchestrator
 final_response = await orchestrator.communicate(
   "please synthesize these research findings into a final report",
   context=responses,
 )
 ```
 
-Key features:
-- **Auto-Resume Sessions**: Conversations automatically continue from where they left off
-- **Tool Permissions**: Fine-grained control over which tools Claude can access
-- **Streaming Support**: Real-time feedback during code generation
-- **Seamless Integration**: Works with existing LionAGI workflows
+Key features: auto-resume sessions, fine-grained tool permissions, streaming support, and seamless integration with existing Vynix workflows.
 
-### optional dependencies
+### Optional Dependencies
 
 ```
-"lionagi[reader]" - Reader tool for any unstructured data and web pages
-"lionagi[ollama]" - Ollama model support for local inference
-"lionagi[rich]" - Rich output formatting for better console display
-"lionagi[schema]" - Convert pydantic schema to make the Model class persistent
-"lionagi[postgres]" - Postgres database support for storing and retrieving structured data
-"lionagi[graph]" - Graph display for visualizing complex workflows
-"lionagi[sqlite]" - SQLite database support for lightweight data storage (also need `postgres` option)
+"vynix[reader]"   - Reader tool for unstructured data and web pages
+"vynix[ollama]"   - Ollama model support for local inference
+"vynix[rich]"     - Rich output formatting for better console display
+"vynix[schema]"   - Convert Pydantic schema to persistent Model classes
+"vynix[postgres]" - Postgres support for storing and retrieving structured data
+"vynix[graph]"    - Graph display for visualizing complex workflows
+"vynix[sqlite]"   - SQLite support for lightweight data storage
 ```
 
 ## Community & Contributing
 
-We welcome issues, ideas, and pull requests:
+We welcome issues, ideas, and pull requests. Join our community to chat, get help, or contribute.
 
-- Discord: Join to chat or get help
-- Issues / PRs: GitHub
+---
 
-### Citation
+**🔷 Vynix**
 
-```
-@software{Li_LionAGI_2023,
-  author = {Haiyang Li},
-  month = {12},
-  year = {2023},
-  title = {LionAGI: Towards Automated General Intelligence},
-  url = {https://github.com/lion-agi/lionagi},
-}
-```
-
-**🦁 LionAGI**
-
-> Because real AI orchestration demands more than a single prompt. Try it out
-> and discover the next evolution in structured, multi-model, safe AI.
+> Because real AI orchestration demands more than a single prompt. Try it out and discover the next evolution in structured, multi-model, safe AI.
