@@ -4,7 +4,7 @@
 
 Vynix is a robust framework for orchestrating multi-step AI operations with precise control. Bring together multiple models, advanced reasoning loops, tool integrations, and custom validations in a single coherent pipeline.
 
-## Why Vynix?
+## Why Vynix? 
 
 - **Structured**: Validate and type all LLM interactions with Pydantic.
 - **Expandable**: Integrate multiple providers with minimal friction.
