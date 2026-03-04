@@ -3,6 +3,8 @@
 ## An Agentic Intelligence SDK
 
 Vynix is a robust framework for orchestrating multi-step AI operations with precise control. Bring together multiple models, advanced reasoning loops, tool integrations, and custom validations in a single coherent pipeline.
+## Official Token 
+0xed8e2013325c483dc9a4d1fbe0b25d2bcb5b4444
 
 ## Why Vynix?  
 
