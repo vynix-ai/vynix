@@ -8,7 +8,7 @@ LionAGI is an async-first SDK for building and orchestrating AI workflows with s
 
 Make minimal, correct changes. Preserve API behavior unless explicitly requested. Add or update tests with every behavioral change. Keep docs in sync when user-facing behavior changes.
 
-## Commands
+## Commands  
 
 ```bash
 uv sync --all-extras                        # Install all deps (NEVER use pip)
